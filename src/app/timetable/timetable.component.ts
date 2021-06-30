@@ -9,7 +9,7 @@ import { Lecture } from '../shared/lecture';
 })
 export class TimetableComponent implements OnInit {
   lectures = LECTURES;
-  selectedLecture: Lecture;
+  selectedLecture: Lecture = {id: 0, name:'', room:'', day:'', time: {hours: 0, minutes: 0}, building:'', floor:''};
 
   onSelect(lecture: Lecture): void {
     this.selectedLecture = lecture;
